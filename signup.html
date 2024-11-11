@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="preload"
+      href="./images/pexels-francesco-ungaro-20769136.jpg"
+      as="image"
+    />
+    <link rel="preload" href="./images/wheat-2391348.jpg" as="image" />
+    <link
+      rel="preload"
+      href="./images/pexels-quang-nguyen-vinh-222549-2165688.jpg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="./images/pexels-wolfgang-weiser-467045605-22679655.jpg"
+      as="image"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Background Carousel</title>
+    <style>
+      .carousel-item {
+        height: 100vh;
+        background: no-repeat center center;
+        background-size: cover;
+        max-width: 100%;
+        width: 100vw;
+      }
+
+      .carousel {
+        position: absolute;
+        height: 100vh;
+        z-index: -1;
+        top: 0%;
+        left: 0%;
+        width: 100vw;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sen-container">
+      <div
+        class="container d-flex justify-content-center align-items-center min-vh-100"
+      >
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+          <div
+            class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+            style="background: #103cbe; position: relative; overflow: hidden"
+          >
+            <!-- Background image in the container -->
+            <div
+              class="featured-image"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('images/image 9.jpg');
+                background-size: cover;
+                background-position: center;
+                filter: brightness(
+                  0.7
+                ); /* Optional: darken for text readability */
+              "
+            ></div>
+
+            <!-- Text on top of the image -->
+            <p
+              class="text-white fs-2"
+              style="
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 600;
+                z-index: 1; /* Ensure text is above the image */
+              "
+            >
+              The future grows in fields
+            </p>
+
+            <small
+              class="text-white text-wrap text-center"
+              style="
+                width: 17rem;
+                font-family: 'Courier New', Courier, monospace;
+                z-index: 1;
+              "
+              >Nurturing the Earth, Feeding the World</small
+            >
+          </div>
+
+          <div class="col-md-6 right-box">
+            <form id="signupForm">
+              <div class="row align-items-center">
+                <div class="header-text">
+                  <h2>Hello, Again</h2>
+                  <p>We are happy to have you back.</p>
+                </div>
+                <div class="input-group mb-3 input-wrapper sign">
+                  <input
+                    type="text"
+                    class="form-control form-control bg-light"
+                    placeholder="Email address"
+                  />
+                </div>
+                <div class="input-group mb-3 input-wrapper field2 sign">
+                  <input
+                    type="password"
+                    class="form-control form-control bg-light"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="input-group mb-3 input-wrapper field2 sign">
+                  <input
+                    type="password"
+                    class="form-control form-control bg-light"
+                    placeholder="Confirm Password"
+                  />
+                </div>
+                <div class="input-group mb-5 input-wrapper field2 sign">
+                  <input
+                    type="text"
+                    class="form-control form-control bg-light"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <button
+                    type="submit"
+                    class="btn btn-lg btn-primary w-100 fs-6"
+                  >
+                    Signup
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="carouselBackground" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active"
+            style="
+              background-image: url('./images/pexels-francesco-ungaro-20769136.jpg');
+            "
+          ></div>
+          <div
+            class="carousel-item"
+            style="background-image: url('./images/wheat-2391348.jpg')"
+          ></div>
+          <div
+            class="carousel-item"
+            style="
+              background-image: url('./images/pexels-quang-nguyen-vinh-222549-2165688.jpg');
+            "
+          ></div>
+          <div
+            class="carousel-item"
+            style="
+              background-image: url('./images/pexels-wolfgang-weiser-467045605-22679655.jpg');
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="signup.js"></script>
+  </body>
+</html>

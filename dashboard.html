@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2 class="h1bg">SmartAgri</h2>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="navSections">
+            <p>Home</p>
+            <p>Dashboard</p>
+            <p>WeatherForecast</p>
+            <div class="lang">
+                <div>EN</div>   
+                <div class="langBorder"></div>
+                <div>あ</div>
+            </div>
+            <button class="LogoutBtn">Logout</button>
+        </div>
+    </div>
+    <hr class="hrr">
+
+    <!-- Field Condition and Today's Weather -->
+    <div class="currentInfo"> 
+        <!-- Field temperature and other points -->
+        <div class="fieldMain">
+            <h2>Field Condition</h2>
+            <div class="fieldBox">
+                <div class="predictions" style="background-color: #D1EFF5;"><p>Temperature</p></div>
+                <div class="predictions" style="background-color: #D1EEDB;"><p>Humidity</p></div>
+                <div class="predictions" style="background-color: #F0F5D1;"><p>Wind Speed</p></div>
+                <div class="predictions" style="background-color: rgb(216, 216, 216);"><p>Solar Radiation</p></div>
+                <div class="predictions" style="background-color: #f5d1f0;"><p>Rainfall</p></div>
+            </div>
+        </div>   
+        <!-- Today's Task List -->
+        <div class="todayTaskMain">
+            <h2>Today's Task</h2>
+            <div id="date"></div>
+            <div class="todayTaskBox" style="background-color: #D1EFF5;">
+                <p>List of tasks : </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Farms Info -->
+    <div class="farmInfoMain">
+        <div class="farmsHeading">
+            <h2>Your Farms</h2>
+            <h3 style="color: blue; cursor: pointer;">Click here to see map</h3>
+        </div>
+        <!-- Dummy farms -->
+        <!-- Can insert more farms from backend  -->
+        <!-- Now just for passing data -->
+        <div class="allfarms">
+            <div class="farms">
+                <p>Farm :</p>
+                <p>Stage :</p>
+                <p>Fertilizers :</p>
+            </div>
+            <div class="farms">
+                <p>Farm :</p>
+                <p>Stage :</p>
+                <p>Fertilizers :</p>
+            </div>
+            <div class="farms">
+                <p>Farm :</p>
+                <p>Stage :</p>
+                <p>Fertilizers :</p>
+            </div>
+            <div class="farms">
+                <p>Farm :</p>
+                <p>Stage :</p>
+                <p>Fertilizers :</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navSections").classList.toggle("active");
+        }
+        // For date functionality
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1;
+        let yyyy = today.getFullYear();
+        today = `${dd}-${mm}-${yyyy}`;
+        document.getElementById("date").innerHTML = today;
+    </script>
+</body>
+</html>

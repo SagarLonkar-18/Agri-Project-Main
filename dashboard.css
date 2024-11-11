@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    font-family: "Rethink Sans", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navSections {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navSections.active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 200px;
+}
+
+.LogoutBtn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.LogoutBtn:hover {
+    background-color: red;
+}
+
+.lang {
+    display: flex;
+    gap: 10px;
+    border: 2px solid black;
+    padding: 2px 10px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.langBorder {
+    background-color: white;
+    height: 30px;
+    width: 3px;
+}
+
+/* Main Section */
+.fieldMain {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70vw;
+}
+
+.currentInfo {
+    margin-top: 3vh;
+    display: flex;
+    gap: 10px;
+}
+
+.fieldMain {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.fieldBox {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.predictions {
+    height: 29vh;
+    width: 27vh;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+.todayTaskMain {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.todayTaskBox {
+    height: 25vh;
+    width: 20vw;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+.farmsHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.farmInfoMain {
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 1em;
+}
+
+.allfarms {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.farms {
+    height: 30vh;
+    width: 48%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(213, 211, 211);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .fieldBox .predictions{
+        width: 48%;
+    }
+
+    .todayTaskBox {
+        width: 100%;
+    }
+
+    .allfarms {
+        flex-wrap: wrap;
+    }
+
+    .farms {
+        width: 48%;
+    }
+
+    .currentInfo {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .fieldMain, .todayTaskMain {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navSections {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .currentInfo {
+        flex-direction: column-reverse;
+
+    }
+
+    .fieldBox .predictions, .todayTaskBox {
+        width: 100%;
+    }
+
+    .allfarms {
+        flex-direction: column;
+    }
+
+    .farmsHeading{
+        flex-direction: column;
+    }
+
+    .farms {
+        width: 100%;
+    }
+    .LogoutBtn {
+        background-color: red;
+        color: white;
+        border: none;
+    }
+}
