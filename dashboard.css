@@ -49,6 +49,10 @@ body {
     width: 200px;
 }
 
+.navSections > a{
+    text-decoration-line: none;
+}
+
 .LogoutBtn {
     padding: 10px;
     border-radius: 10px;

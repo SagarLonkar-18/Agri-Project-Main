@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2 class="h1bg">SmartAgri</h2>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="navSections">
+            <a href="profile.html">Profile</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a>WeatherForecast</a>
+            <div class="lang">
+                <div>EN</div>   
+                <div class="langBorder"></div>
+                <div>あ</div>
+            </div>
+            <button class="LogoutBtn">Logout</button>
+        </div>
+    </div>
+    <hr class="hrr">
+    
+    <div class="profile-container">
+        <div class="profile-info">
+            <h2>User Information</h2>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name..">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="email" id="name" placeholder="Enter your email..">
+                </div>
+                
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" placeholder="Enter State..">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" placeholder="Enter address">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" id="phoneNumber" placeholder="Enter phone number">
+                </div>
+                <button type="button" id="editBtn" onclick="editProfile()">Edit</button>
+                <button type="button" id="saveBtn" style="display:none;" onclick="saveProfile()">Save</button>
+            </form>
+        </div>
+        <div class="farms-info">
+            <h2>User Farms</h2>
+            <div id="farms">
+                <p>Farm 1</p>
+                <p>Farm 2</p>
+                <p>Farm 3</p>
+                <p>Farm 4</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navSections").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
