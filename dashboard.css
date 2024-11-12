@@ -49,8 +49,13 @@ body {
     width: 200px;
 }
 
-.navSections > a{
-    text-decoration-line: none;
+.navSections a {
+    color: inherit; /* Keep the same color as set by parent */
+    text-decoration: none; /* Remove underline */
+}
+
+.navSections a:visited {
+    color: inherit; /* Prevent color change after visiting */
 }
 
 .LogoutBtn {
@@ -129,6 +134,22 @@ body {
     width: 20vw;
     border-radius: 1em;
     padding: 10px;
+    overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+    scrollbar-width: thin; /* For Firefox - makes the scrollbar thin */
+}
+
+/* Optional: Style the scrollbar for WebKit browsers (Chrome, Safari) */
+.todayTaskBox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.todayTaskBox::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.todayTaskBox::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
 .farmsHeading {
