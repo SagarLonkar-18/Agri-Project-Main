@@ -92,5 +92,13 @@ function validateForm() {
 form.addEventListener('submit', function(event) {
     if (!validateForm()) {
         event.preventDefault(); // Prevent form submission if validation fails
+    } else {
+        event.preventDefault(); // Prevent the default form action to ensure redirection happens only via JS
+
+        // Debugging step: Log message to ensure function is reached
+        console.log("Form validated successfully. Redirecting to profile page...");
+
+        // Redirect to index page after successful validation
+        window.location.href = "./index.html"; // Check the path
     }
 });
